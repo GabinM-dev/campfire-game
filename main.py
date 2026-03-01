@@ -1,6 +1,9 @@
 import pygame, math, random, settings, assets
 from os import path
 
+pygame.init()
+pygame.mixer.init()
+
 
 class Animation(pygame.sprite.Sprite):
     def __init__(self, x: int, y: int) -> None:
@@ -525,7 +528,7 @@ def __main__() -> None:
     screen = pygame.display.set_mode((settings.WIDTH, settings.HEIGHT), 64)
 
     # Title
-    pygame.display.set_caption("Breakout!")
+    pygame.display.set_caption("Gravity Ball!")
 
     # Font
     global font
@@ -555,6 +558,10 @@ def __main__() -> None:
     title_animation.add(Animation(settings.WIDTH / 2, 200))
 
     load_sprites()
+    # Background music
+    pygame.mixer.music.load("assets/sounds/Sound.mp3")
+    pygame.mixer.music.set_volume(0.5)  # 0.0 (mute) to 1.0 (max)
+    pygame.mixer.music.play(-1)  # -1 = loop infinitely
 
     # Game Loop
     global running
@@ -596,7 +603,7 @@ def __main__() -> None:
 
             # The score
             score_text = font.render(str(score), True, settings.WHITE)
-
+    
             # Update sprites
             sprites.update()
             powerups.update()
@@ -688,3 +695,5 @@ def __main__() -> None:
 
 if __name__ == "__main__":
     __main__()
+
+
