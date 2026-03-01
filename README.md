@@ -1,8 +1,8 @@
-# 🎮 BREAKOUT - Python Game
+# 🎮 Gravity Ball - Python Game
 
 ## ℹ️ About
 
-**BREAKOUT** is a simple 2D animated game developed in Python using the Pygame library. In this classic arcade game, players control a paddle to prevent a ball from falling off the screen while breaking all the blocks. The game includes various power-ups and keeps track of the player's score.
+**Gravity Ball** is a simple 2D animated game developed in Python using the Pygame library. In this classic arcade game, players control a paddle to prevent a ball from falling off the screen while breaking all the blocks. The game includes various power-ups and keeps track of the player's score.
 
 ### 🎮 Gameplay Features
 
